@@ -1,6 +1,3 @@
-//Builder
-
-// Produto
 class Lanche {
     constructor() {
         this.nome = null;
@@ -25,7 +22,6 @@ class Lanche {
     }
 }
 
-// Método Builder
 class LancheBuilder {
     constructor() {
         this.lanche = new Lanche();
@@ -71,7 +67,6 @@ class LancheBuilder {
     }
 }
 
-// Director → Lanches pré-definidos
 class LancheDirector {
     static buildSimples() {
         return new LancheBuilder()
@@ -105,7 +100,6 @@ class LancheDirector {
     }
 }
 
-// Uso
 const simples = LancheDirector.buildSimples();
 const completo = LancheDirector.buildCompleto();
 const vegano = LancheDirector.buildVegano();

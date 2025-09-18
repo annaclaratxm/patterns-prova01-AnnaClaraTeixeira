@@ -1,6 +1,3 @@
-//Abstract
-
-// Produtos concretos
 class LightButton {
     render() {
         return "Botão branco criado!";
@@ -13,14 +10,12 @@ class DarkButton {
     }
 }
 
-// Abstract Factory
 class ButtonFactory {
     createButton() {
         throw new Error("Método abstrato deve ser implementado");
     }
 }
 
-// Concrete Factories
 class LightButtonFactory extends ButtonFactory {
     createButton() {
         return new LightButton();
@@ -33,7 +28,6 @@ class DarkButtonFactory extends ButtonFactory {
     }
 }
 
-// Cliente
 const buttonFactories = {
     light: new LightButtonFactory(),
     dark: new DarkButtonFactory(),
@@ -49,7 +43,6 @@ class ButtonApp {
     }
 }
 
-// Uso
 function main() {
     const themes = ["light", "dark"];
 
